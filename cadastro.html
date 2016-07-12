@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Document</title>
+
+	<!-- Bootstrap Core CSS -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+	<!-- Custom Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+	<link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<script src="js/npm.js" type="text/javascript"></script>
+	<script src="js/bootstrap.js" type="text/javascript"></script>
+
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="jquery.maskedinput.js"></script>
+	
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("input.data").mask("99/99/9999");
+		});
+	</script>
+
+
+	<!--Javascript validando campos obrigatórios-->
+	<script type="text/javascript">
+		function validaCampo(){
+			if(document.cadastro.nome.value==""){
+				alert("O Campo nome é obrigatório!");
+				return false;
+			}
+			if(document.cadastro.email.value==""){
+				alert("O Campo email é obrigatório!");
+				return false;
+			}
+			if(document.cadastro.endereco.value==""){
+				alert("O Campo endereço é obrigatório!");
+				return false;
+			}
+			if(document.cadastro.cidade.value=="")
+			{
+				alert("O Campo Cidade é obrigatório!");
+				return false;
+			}
+			if(document.cadastro.estado.value=="")
+			{
+				alert("O Campo Estado é obrigatório!");
+				return false;
+			}
+			if(document.cadastro.bairro.value=="")
+			{
+				alert("O Campo Bairro é obrigatório!");
+				return false;
+			}
+			if(document.cadastro.pais.value=="")
+			{
+				alert("O Campo país é obrigatório!");
+				return false;
+			}
+			if(document.cadastro.login.value=="")
+			{
+				alert("O Campo Login é obrigatório!");
+				return false;
+			}
+			if(document.cadastro.senha.value=="")
+			{
+				alert("Digite uma senha!");
+				return false;
+			}
+			else{
+				return true;
+			}
+		}
+		//Fim do JavaScript que validará os campos obrigatórios!
+	</script>
+
+</head>
+
+
+
+<body>
+
+<div class="container-fluid">
+	<form class="margens" id="cadastro" name="cadastro" method="post" action="cadastro.php" onsubmit="return validaCampo(); return false;">
+		<div class="row-fluid corFundo1">
+			<div class="span4">
+				Data:
+			</div>
+			<div class="span8">
+				teste
+				<!--<input name="nome" type="text" id="nome" size="70" maxlength="60" />-->
+			</div>
+		</div>
+		<div class="row-fluid corFundo2">
+			<div class="span4">
+				Data:
+			</div>
+			<div class="span8">
+				teste
+				<!--<input name="nome" type="text" id="nome" size="70" maxlength="60" />-->
+			</div>
+		</div>
+	</form>
+</div>
+
+</body>
+</html>
